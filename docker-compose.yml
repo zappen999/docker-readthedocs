@@ -12,7 +12,7 @@ readthedocs:
     RTD_HAS_REDIS: 'true'
     PGPASSWORD: secretpassword
   ports:
-    - "8000:8000"
+    - "80:8000"
   links:
     - db
     - elasticsearch
