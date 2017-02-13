@@ -8,6 +8,9 @@ db:
     - ./pgsql:/var/lib/postgresql
 readthedocs:
   build: .
+  environment:
+    RTD_HAS_REDIS: 'true'
+    PGPASSWORD: secretpassword
   ports:
     - "8000:8000"
   links:
@@ -16,6 +19,7 @@ readthedocs:
     - redis
   volumes:
     - ./user_builds:/app/user_builds
+    - ./ssh:/root/.ssh
 elasticsearch:
   image: jfroche/elasticsearch
   ports:

@@ -24,3 +24,4 @@ BROKER_URL = 'redis://redis:6379/0'
 CELERY_RESULT_BACKEND = 'redis://redis:6379/0'
 DEBUG = True
 CELERY_ALWAYS_EAGER = False
+ALLOW_PRIVATE_REPOS = True
