@@ -18,7 +18,6 @@ readthedocs:
     - elasticsearch
     - redis
   volumes:
-    - ./user_builds:/app/user_builds
     - ./ssh:/root/.ssh
 elasticsearch:
   image: jfroche/elasticsearch
